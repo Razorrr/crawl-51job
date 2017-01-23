@@ -1,0 +1,8 @@
+#encoding=utf-8
+from wordcloud import WordCloud
+text = "Python,Python,Python,Python,Python,re,MySql,VBA,VBA,VBA,VBA,VBA,MongoDB,MongoDB,Linux,Linux,Excel,Excel,PPT,PPT,PPT,PPT"
+# lower max_font_size
+wordcloud = WordCloud(max_font_size=40, background_color="white", margin=5, max_words=50, random_state=42).generate(text)
+# The pil way (don't use matplotlib)
+image1 = wordcloud.to_image()
+image1.show()
